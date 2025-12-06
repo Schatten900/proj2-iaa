@@ -1,0 +1,63 @@
+# ==========================================
+#  PYTHON / TENSORFLOW / IA - GITIGNORE
+# ==========================================
+
+# ---- Virtual Environment ----
+venv/
+.env/
+.venv/
+
+# ---- Modelos treinados (.h5, checkpoints) ----
+*.h5
+*.hdf5
+checkpoints/
+models/
+
+# Caso você queira versionar o dataset, remova a linha acima.
+
+# ---- Arquivos temporários ----
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.tmp
+*.temp
+*.log
+
+# ---- Cache do TensorFlow ----
+*.tfevents*
+*.tensorboard/
+logs/
+logs/**
+events.out.tfevents.*
+
+# ---- Cache do Jupyter Notebook ----
+.ipynb_checkpoints/
+
+# ---- Configurações de IDE ----
+
+# VSCode
+.vscode/
+
+# PyCharm / JetBrains
+.idea/
+
+# ---- SO Files ----
+.DS_Store
+Thumbs.db
+
+# ---- Arquivos de execução ----
+nohup.out
+
+# ---- Arquivos gerados automaticamente ----
+generated/
+outputs/
+
+# ---- Arquivos de build ----
+build/
+dist/
+*.egg-info/
+
+# ---- Imagens geradas na inferência ----
+inferencias/
+inference_output/
