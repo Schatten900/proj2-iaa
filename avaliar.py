@@ -14,11 +14,11 @@ def avaliar():
     saudaveis = glob.glob("dataset/Healthy_Test50/*")
     doentes   = glob.glob("dataset/Disease_Test100/*")
 
-    print(f"✅ Saudáveis: {len(saudaveis)}")
-    print(f"✅ Doentes: {len(doentes)}")
+    print(f"Saudáveis: {len(saudaveis)}")
+    print(f"Doentes: {len(doentes)}")
 
     if len(saudaveis) == 0 and len(doentes) == 0:
-        print("❌ Nenhuma imagem encontrada.")
+        print("Nenhuma imagem encontrada.")
         return
 
     gerador = carregar_modelo()
@@ -46,10 +46,10 @@ def avaliar():
         y_pred.append(pred)
 
     if len(y_true) == 0:
-        print("❌ Nenhuma imagem válida processada.")
+        print("Nenhuma imagem válida processada.")
         return
 
-    print("\n📊 MÉTRICAS:\n")
+    print("\n MÉTRICAS:\n")
     print("Accuracy :", accuracy_score(y_true, y_pred))
     print("Precision:", precision_score(y_true, y_pred, zero_division=0))
     print("Recall   :", recall_score(y_true, y_pred, zero_division=0))
