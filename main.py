@@ -8,8 +8,8 @@
 import os
 import random
 
-from services.treinamento import treinar
-from services.inferencia import inferir
+from treinamento import treinar
+from inferencia import inferir
 
 # Pastas do dataset de teste
 PASTAS_TESTE = [

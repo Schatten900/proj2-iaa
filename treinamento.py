@@ -14,7 +14,7 @@ from services.discriminador import construir_discriminador
 
 LR = 2e-4
 LAMBDA_L1 = 50     # menor = treinamento mais rápido
-EPOCHS = 15
+EPOCHS = 60
 BATCH_SIZE = 2
 
 
@@ -94,3 +94,7 @@ def treinar():
     print("Modelo salvo como gerador_treinado.h5")
 
     return gerador
+
+
+if __name__ == "__main__":
+    treinar()
